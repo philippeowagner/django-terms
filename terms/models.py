@@ -27,6 +27,9 @@ class Term(Model):
     case_sensitive = BooleanField(_('case sensitive'), default=False)
     definition = TextField(_('definition'), blank=True,
                            help_text=_('Accepts HTML tags.'))
+    teaser_title = CharField(_('teaser_title'), max_length=100,null=True, blank=True)
+    teaser_img = ImageField(upload_to="terms/", null=True, blank=True)
+    teaser_txt = TextField(_('teaser_txt'), blank=True, help_text=_('Accepts HTML tags.'))
     url = CharField(_('link'), max_length=200, blank=True,
                     help_text=_('Address to which the term will redirect '
                                 '(instead of redirecting to the definition).'))
