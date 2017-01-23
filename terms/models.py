@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import sys
 from django.core.cache import cache
 from django.core.urlresolvers import reverse
-from django.db.models import Model, CharField, TextField, BooleanField
+from django.db.models import Model, CharField, TextField, BooleanField, ImageField
 from django.utils.translation import ugettext_lazy as _
 from .managers import TermManager, CACHE_KEYS
 
